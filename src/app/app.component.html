@@ -1,22 +1,23 @@
 <dx-data-grid
-  [dataSource]="dataSource"
-  [remoteOperations]="true"
-  [height]="600"
-  [showBorders]="true"
+[dataSource]="dataSource"
+[remoteOperations]="true"
+[height]="600"
+[showBorders]="true"
 >
+
   <dxo-filter-row [visible]="true"></dxo-filter-row>
   <dxo-header-filter [visible]="true"></dxo-header-filter>
   <dxo-group-panel [visible]="true"></dxo-group-panel>
   <dxo-scrolling mode="virtual"></dxo-scrolling>
   <dxo-editing
-    mode="cell"
+    mode="row"
     [allowAdding]="true"
     [allowUpdating]="true"
     [allowDeleting]="true"
   >
   </dxo-editing>
   <dxo-grouping [autoExpandAll]="false"></dxo-grouping>
-  <dxo-master-detail [enabled]="true" template="detail"></dxo-master-detail>
+  <dxo-master-detail [enabled]="true" template="detail"></dxo-master-detail><dx-button text="Click me!"></dx-button>
   <dxi-column dataField="CustomerID" caption="Customer">
     <dxi-validation-rule
       type="stringLength"

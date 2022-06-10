@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 import { DetailGridComponent } from './detail-grid/detail-grid.component';
 
 import { DxDataGridModule } from 'devextreme-angular';
+import { DxButtonModule } from 'devextreme-angular';
+
 
 @NgModule({
   declarations: [
@@ -15,7 +17,9 @@ import { DxDataGridModule } from 'devextreme-angular';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    DxDataGridModule
+    
+    DxDataGridModule,
+    DxButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
