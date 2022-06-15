@@ -2,11 +2,15 @@ import { Component } from '@angular/core';
 import * as AspNetData from 'devextreme-aspnet-data-nojquery';
 
 @Component({
-    styleUrls: ['./app.component.css'],
+  styleUrls: ['./app.component.css'],
   selector: 'demo-app',
   templateUrl: './app.component.html',
 })
 export class AppComponent {
+  TooltipTarget: any;
+  ToolTipText: string = '';
+  isVisisble = false;
+
   customersData: any;
 
   shippersData: any;
@@ -29,7 +33,7 @@ export class AppComponent {
       onBeforeSend(method, ajaxOptions) {
         ajaxOptions.xhrFields = { withCredentials: true };
       },
-    });    
+    });
 
     this.customersData = AspNetData.createStore({
       key: 'Value',
@@ -45,6 +49,6 @@ export class AppComponent {
       onBeforeSend(method, ajaxOptions) {
         ajaxOptions.xhrFields = { withCredentials: true };
       },
-    });    
+    });
   }
 }
