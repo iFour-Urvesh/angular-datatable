@@ -9,6 +9,10 @@ import { CommentComponent } from './comment/comment.component';
   templateUrl: './app.component.html',
 })
 export class AppComponent {
+  TooltipTarget: any;
+  ToolTipText: string = '';
+  isVisisble = false;
+
   customersData: any;
 
   shippersData: any;
